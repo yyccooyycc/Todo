@@ -9,12 +9,12 @@
             <form [formGroup]= "todoForm">
                 <mat-form-field appearance="outline">
                   <mat-label>Task Name</mat-label>
-                  <input matInput placeholder="Placeholder">
+                  <input formControlName="item" matInput placeholder="placeholder">
                   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                   <mat-hint>Add task name</mat-hint>
                 </mat-form-field>
                 <p></p>
-                <button (click)="addTask()" mat-raised-button  class="buttons-class">Add</button>
+                <button (click)="addTask()" mat-raised-button [disabled]="todoForm.invalid"  class="buttons-class">Add</button>
                 <p></p>
             </form>
           </mat-card>
@@ -31,6 +31,9 @@
                     class="example-list"
                     (cdkDropListDropped)="drop($event)">
                     <div class="example-box" *ngFor="let item of tasks" cdkDrag>{{item.description}}
+                      <div class="box">
+                        <button mat-icon-button color="warn"></button>
+                      </div>
                     </div>
                   </div>
                 </div>
