@@ -13,9 +13,6 @@
     display: flex;
 }
 
-:host .row{
-    background-color: rgb(227, 237, 226);
-}
 
 :host .buttons-class{
     background-color: rgb(43, 134, 92);
@@ -23,9 +20,9 @@
    
 }
 .example-container {
-    width: 300px;
+    width: 350px;
     max-width: 100%;
-    margin: 0 25px 25px 0;
+    margin: 25px 25px 25px 25px;
     display: inline-block;
     vertical-align: top;
 }
@@ -75,4 +72,23 @@
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.box{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+
+.head-title{
+    margin:0;
+    padding: 10px;
+    background-color: rgb(42, 121, 122);
+    border-radius: 2px;
+    color: rgb(249, 249, 250);
+    font-size: 1.2rem;
+    font-weight: 400;
+    span{
+        font-weight: normal;
+    }
 }
