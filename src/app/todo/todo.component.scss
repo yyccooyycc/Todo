@@ -1,14 +1,16 @@
 :host .mat-form-field {
     width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 :host .md-3{
     padding: 10px;
-    width: 100%;
-    align-items: center;
+    display: flex;
+    align-items:center;
+}
+
+:host .button_div{
     justify-content: center;
+    display: flex;
 }
 
 :host .row{

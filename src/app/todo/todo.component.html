@@ -13,9 +13,9 @@
                   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                   <mat-hint>Add task name</mat-hint>
                 </mat-form-field>
-                <p></p>
-                <button (click)="addTask()" mat-raised-button [disabled]="todoForm.invalid"  class="buttons-class">Add</button>
-                <p></p>
+                <div class="button_div">
+                  <button (click)="addTask()" mat-raised-button [disabled]="todoForm.invalid"  class="buttons-class">Add</button>
+                </div>
             </form>
           </mat-card>
         </div>
